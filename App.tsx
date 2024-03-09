@@ -6,12 +6,13 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import ScrollViewPanGesture from './src/ScrollViewPanGesture/ScrollViewPanGesture';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
+      <ScrollViewPanGesture />
     </SafeAreaView>
   );
 }
@@ -19,9 +20,6 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
   },
 });
 
