@@ -8,3 +8,5 @@ https://github.com/gokulkulkarni1987/ReanimatedLearning/assets/6063899/4559ef2d-
 ## Interpolate Text
 https://github.com/gokulkulkarni1987/ReanimatedLearning/assets/6063899/871e1e6c-9d2a-480f-8749-0bb32987fc3e
 
+## Color Picker
+https://github.com/gokulkulkarni1987/ReanimatedLearning/assets/6063899/d3c848b0-289e-4ec6-b5de-009df019cf44
