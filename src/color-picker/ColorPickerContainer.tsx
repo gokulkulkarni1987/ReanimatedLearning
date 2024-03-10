@@ -38,7 +38,6 @@ const ColorPickerContainer: React.FC<ColorPickerContainerProps> = ({}) => {
   const handleOnChanged = React.useCallback(
     (color: string) => {
       'worklet';
-      console.log(color);
       pickedColor.value = color;
     },
     [pickedColor],
