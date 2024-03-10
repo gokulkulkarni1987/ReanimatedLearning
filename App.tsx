@@ -7,12 +7,15 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import ScrollViewPanGesture from './src/ScrollViewPanGesture/ScrollViewPanGesture';
+import InterpolateColor from './src/interpolate-color/InterpolateColor';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollViewPanGesture />
+      {/** Uncomment below code for PanGesture */}
+      {/* <ScrollViewPanGesture /> */}
+      {/** Uncomment below code for Interpolate Color */}
+      <InterpolateColor />
     </SafeAreaView>
   );
 }
