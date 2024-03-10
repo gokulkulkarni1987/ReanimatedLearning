@@ -7,7 +7,7 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import InterpolateColor from './src/interpolate-color/InterpolateColor';
+import ColorPickerContainer from './src/color-picker/ColorPickerContainer';
 
 function App(): React.JSX.Element {
   return (
@@ -15,7 +15,9 @@ function App(): React.JSX.Element {
       {/** Uncomment below code for PanGesture */}
       {/* <ScrollViewPanGesture /> */}
       {/** Uncomment below code for Interpolate Color */}
-      <InterpolateColor />
+      {/* <InterpolateColor /> */}
+      {/** Uncomment below code for Color Picker */}
+      <ColorPickerContainer />
     </SafeAreaView>
   );
 }
