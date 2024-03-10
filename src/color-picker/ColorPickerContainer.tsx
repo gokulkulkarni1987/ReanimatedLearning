@@ -20,7 +20,7 @@ const COLORS = [
   'white',
 ];
 
-const BACKGROUND_COLOR = 'rgba(0,0,0,0)';
+const BACKGROUND_COLOR = 'black';
 
 const {width} = Dimensions.get('window');
 const CIRCLE_SIZE = width * 0.8;
@@ -65,12 +65,6 @@ const ColorPickerContainer: React.FC<ColorPickerContainerProps> = ({}) => {
 export default ColorPickerContainer;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
   topContainer: {
     flex: 3,
     backgroundColor: BACKGROUND_COLOR,
