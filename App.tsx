@@ -21,7 +21,7 @@ function App(): React.JSX.Element {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
           {screens.map(({name, component}) => (
-            <Stack.Screen name={name} component={component} />
+            <Stack.Screen key={name} name={name} component={component} />
           ))}
         </Stack.Navigator>
       </NavigationContainer>

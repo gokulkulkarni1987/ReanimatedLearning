@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
   return (
     <View style={styles.container}>
       {screens.map(({name}) => (
-        <Button title={name} onPress={() => handleNav(name)} />
+        <Button key={name} title={name} onPress={() => handleNav(name)} />
       ))}
     </View>
   );
