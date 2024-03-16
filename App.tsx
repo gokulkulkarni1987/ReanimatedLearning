@@ -5,14 +5,12 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import ColorPickerContainer from './src/color-picker/ColorPickerContainer';
-import ScrollViewPanGesture from './src/ScrollViewPanGesture/ScrollViewPanGesture';
-import InterpolateColor from './src/interpolate-color/InterpolateColor';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/Home';
+import {screens} from './src/utils';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,15 +20,9 @@ function App(): React.JSX.Element {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen
-            name="ScrollViewPanGesture"
-            component={ScrollViewPanGesture}
-          />
-          <Stack.Screen name="InterpolateColor" component={InterpolateColor} />
-          <Stack.Screen
-            name="ColorPickerContainer"
-            component={ColorPickerContainer}
-          />
+          {screens.map(({name, component}) => (
+            <Stack.Screen name={name} component={component} />
+          ))}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

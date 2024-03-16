@@ -1,32 +1,24 @@
 import * as React from 'react';
 import {Button, StyleSheet, View} from 'react-native';
+import {screens} from './utils';
 
 interface HomeProps {
   navigation: any;
 }
 
 const Home: React.FC<HomeProps> = ({navigation}) => {
-  const handleScrollViewPantGestureClicked = React.useCallback(() => {
-    navigation.navigate('ScrollViewPanGesture');
-  }, [navigation]);
-  const handleInterpolateColorClicked = React.useCallback(() => {
-    navigation.navigate('InterpolateColor');
-  }, [navigation]);
-  const handleColorPickerClicked = React.useCallback(() => {
-    navigation.navigate('ColorPickerContainer');
-  }, [navigation]);
+  const handleNav = React.useCallback(
+    (screen: string) => {
+      navigation.navigate(screen);
+    },
+    [navigation],
+  );
 
   return (
     <View style={styles.container}>
-      <Button
-        title="ScrollViewPanGesture"
-        onPress={handleScrollViewPantGestureClicked}
-      />
-      <Button
-        title="InterpolateColor"
-        onPress={handleInterpolateColorClicked}
-      />
-      <Button title="ColorPickerContainer" onPress={handleColorPickerClicked} />
+      {screens.map(({name}) => (
+        <Button title={name} onPress={() => handleNav(name)} />
+      ))}
     </View>
   );
 };
